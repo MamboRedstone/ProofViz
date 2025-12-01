@@ -1,0 +1,10 @@
+html {
+    background-color: black;
+}
+
+#main_home_title {
+    font-family: cursive;
+    text-align:center;
+    font-size: 50pt;
+    color: white;
+}
