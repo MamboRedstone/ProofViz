@@ -1,107 +1,135 @@
-/* BODY */
-body {
+/* PAGE BACKGROUND */
+.page {
     background: radial-gradient(circle, #130322 50%, #0f011b 100%);
     background-attachment: fixed;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
-/* TOP BAR */
-#top_home_bar {
+/* HEADER */
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: radial-gradient(circle, #0b0014 50%, #070007 100%);
-    padding: 20px 0;
+    padding: 2vh 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-#website_home_title {
+.header__title {
     color: white;
-    font-size: 24pt;
-    padding-left: 40pt;
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    padding-left: 4vw;
     margin: 0;
 }
 
-/* MAIN CONTENT */
-#main {
-    padding-top: 180px; /* leave space for fixed header */
+/* MAIN LAYOUT */
+.hero {
+    padding-top: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
 }
 
-/* SCROLLABLE */
-.scrollable_container {
-    overflow-y: auto;
-    overflow-x: hidden;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-/* HERO SECTION */
-.home_main_description {
-    font-size: 45pt;
-    padding-left: 40pt;
+/* HERO TITLE AND DESCRIPTION TEXT */
+.hero__title {
+    font-size: clamp(3rem, 5vw, 6rem);
+    padding-left: 0vw;
     line-height: 1.2;
     color: white;
-    margin-bottom: 35px; /* space below hero text */
+    margin-bottom: 4vh;
 }
 
-#unique_txt1 {
+.hero__title--gradient {
     background: linear-gradient(180deg, #ffffff, #ab02c2);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 60pt;
+    font-size: clamp(4rem, 7vw, 9rem);
 }
 
-/* SMALL DESCRIPTION */
-.small_description {
-    font-size: 18pt;
-    padding-left: 40pt;
+.hero__left {
+    flex: 1;
+}
+.hero__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.hero__image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+}
+
+.description {
+    font-size: clamp(1.5rem, 2vw, 2.2rem);
+    padding-left: 0vw;
     line-height: 1.4;
-    margin-bottom: 30px; /* space before button */
+    margin-bottom: 4vh;
 }
 
-#unique_txt2 {
+.description__text--gradient {
     background: linear-gradient(180deg, #c0c0ff, #7b3fbf);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
-/* BUTTON SECTION */
-.button_section {
-    padding-left: 40pt;
-    margin-bottom: 60px; /* space after button */
+/* GEOMETRY SECTION */
+.geometry {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: radial-gradient(circle, #0b0014 50%, #070007 100%);
+    padding: 3vh 4vw;
+    z-index: 900;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    margin: 0;
+    border-radius: 12vm;
 }
 
 /* BUTTON */
+.hero__cta {
+    padding-left: 0vw;
+    margin-bottom: 6vh;
+}
+
 .button {
     border: none;
-    color: white;
-    padding: 16px 40px;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 1.2rem 3rem;
+    font-size: clamp(1rem, 1.4vw, 2rem);
     cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease;
+    font-family: inherit;
     border-radius: 12px;
-    background: linear-gradient(135deg, #ab02c2, #550077); /* purple gradient */
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.button--primary {
+    color: white;
+    background: linear-gradient(135deg, #ab02c2, #550077);
     box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
-/* HOVER EFFECT */
-.button:hover {
+.button--primary:hover {
     transform: translateY(-5px);
     filter: brightness(1.2);
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
-/* ACTIVE EFFECT */
-.button:active {
+.button--primary:active {
     transform: translateY(0);
     filter: brightness(0.9);
 }

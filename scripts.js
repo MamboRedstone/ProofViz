@@ -1,9 +1,6 @@
-<script>
-function scrollDown(amount) {
-    window.scrollBy({
-        top: amount,
-        left: 0,
-        behavior: 'smooth' 
-    })
-};
-</script>
+// Scroll to element function
+function scrollToElement(selector) {
+    const el = document.querySelector(selector);
+    const top = el.getBoundingClientRect().top + window.scrollY - 120; // offset for header 
+    window.scrollTo({ top, behavior: "smooth" });
+}

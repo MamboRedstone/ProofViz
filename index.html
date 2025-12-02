@@ -4,52 +4,54 @@
     <title>Home - ProofViz</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="scrollable_container">
 
-    <!-- Top Bar -->
-    <header id="top_home_bar">
-        <h1 id="website_home_title">ProofViz</h1>
+<body class="page">
+
+    <!-- Header -->
+    <header class="header">
+        <h1 class="header__title">ProofViz</h1>
     </header>
 
     <!-- Main Content -->
-    <main id="main">
+<main class="hero">
 
-        <!-- Hero Section -->
-        <section class="home_main_description">
-            Learn Quicker With <br> 
-            <span id="unique_txt1">Visual Proofs</span>
+    <div class="hero__left">
+        <section class="hero__title">
+            Learn Quicker With <br>
+            <span class="hero__title--gradient">Visual Proofs</span>
         </section>
 
-        <!-- Description Section -->
-        <section class="small_description">
-            <span id="unique_txt2">
-                A website containing so many visual proofs.<br>
-                From Pythagorean theorem to geometric series.
+        <section class="description">
+            <span class="description__text description__text--gradient">
+                A website containing many visual proofs<br>
+                Helping you understand various concepts.
             </span>
         </section>
 
-        <!-- Button Section -->
-        <section class="button_section">
-            <button class="button" onclick="scrollDown(500)">
-                Get Started
+        <section class="hero__cta">
+            <button class="button button--primary" onclick="scrollToElement('.geometry')">
+                Get started
             </button>
         </section>
+    </div>
 
-        <!-- Spacer for scrolling -->
-        <div style="height: 1200px;"></div>
+    <!-- IMAGE AREA -->
+    <div class="hero__image">
+        <img src="pythagorean visual proof.png" alt="Math Graphic">
+    </div>
 
-    </main>
+</main>
+        <div style="height: 37vh;"></div>
+        <!-- Geometry Section -->
+        <section class="geometry">
+            <b>GEOMETRY</b>
+        </section>
 
-    <!-- SCROLL SCRIPT -->
-    <script>
-    function scrollDown(amount) {
-        window.scrollBy({
-            top: amount,
-            left: 0,
-            behavior: 'smooth'
-        });
-    }
-    </script>
+
+        <!-- Scroll space -->
+        <div style="height: 150vh;"></div>
+
+    <script src="scripts.js"></script>
 
 </body>
 </html>
