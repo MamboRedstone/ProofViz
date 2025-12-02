@@ -1,10 +1,72 @@
-html {
-    background-color: black;
+/* Background for entire page */
+body {
+    background-image: radial-gradient(circle, #130322 50%, #141414 100%);
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#main_home_title {
-    font-family: cursive;
-    text-align:center;
-    font-size: 50pt;
+/* Top bar */
+#top_home_bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: radial-gradient(circle, #0f011b 50%, #141414 100%);
+    padding: 20px 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Title inside top bar */
+#website_home_title {
     color: white;
+    font-size: 20pt;
+    padding-left: 40pt;
+    margin: 0;
+}
+
+/* MAIN CONTENT */
+#main {
+    padding-top: 200px; /* height of header + spacing */
+}
+
+/* Scroll container for the page (body scrolls naturally) */
+.scrollable_container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Main description text */
+.home_main_description {
+    color: rgb(255, 255, 255);
+    font-size: 45pt;
+    padding-left: 40pt;
+    line-height: 1.2;
+}
+
+.small_description {
+    color: white;
+    font-size: 15pt;
+    padding-left: 40pt;
+    padding-top: 10pt;
+    line-height: 1.2;
+}
+
+/* Special gradient colour */
+#unique_txt1 {
+    background: linear-gradient(180deg, hsl(0, 0%, 100%), #ab02c2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 60pt;
+}
+
+#unique_txt2 {
+    background: linear-gradient(180deg, hsl(0, 0%, 76%), #a0a0a0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
