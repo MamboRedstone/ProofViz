@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html> 
-    <head>
-        <title>Home - ProofViz</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body class="scrollable_container">
+<head>
+    <title>Home - ProofViz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="scrollable_container">
 
-        <div id="top_home_bar">
-            <h1 id="website_home_title">ProofViz</h1>
-        </div>
+    <!-- Top Bar -->
+    <header id="top_home_bar">
+        <h1 id="website_home_title">ProofViz</h1>
+    </header>
 
-        <div id="main">
+    <!-- Main Content -->
+    <main id="main">
 
-            <div class="home_main_description">
-                Learn Quicker With <br> 
-                <span id="unique_txt1">Visual Proofs</span>
-            </div>
+        <!-- Hero Section -->
+        <section class="home_main_description">
+            Learn Quicker With <br> 
+            <span id="unique_txt1">Visual Proofs</span>
+        </section>
 
-            <div class="small_description">
-                <span id="unique_txt2">
-                    A website containing so many visual proofs.<br>
-                    From pythagorean theorem to geometric series.
-                </span>
-            </div>
+        <!-- Description Section -->
+        <section class="small_description">
+            <span id="unique_txt2">
+                A website containing so many visual proofs.<br>
+                From Pythagorean theorem to geometric series.
+            </span>
+        </section>
 
-            <div style="height: 1200px;"></div>
-        </div>
+        <!-- Button Section -->
+        <section class="button_section">
+            <button class="button" onclick="scrollDown(500)">
+                Get Started
+            </button>
+        </section>
 
-    </body>
+        <!-- Spacer for scrolling -->
+        <div style="height: 1200px;"></div>
+
+    </main>
+
+    <!-- SCROLL SCRIPT -->
+    <script>
+    function scrollDown(amount) {
+        window.scrollBy({
+            top: amount,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+    </script>
+
+</body>
 </html>
